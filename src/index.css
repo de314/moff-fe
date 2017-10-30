@@ -1,5 +1,15 @@
 @import './styles/mock-bootstrap.css';
 
+.PrivateApp .layout-left {
+  -ms-flex: 0 0 300px;
+  flex: 0 0 300px;
+}
+
+.PrivateApp .layout-left.sidebar-collapsed {
+  -ms-flex: 0 0 120px;
+  flex: 0 0 120px;
+}
+
 .PublicHeader .logo {
   width: 120px;
   height: 31px;

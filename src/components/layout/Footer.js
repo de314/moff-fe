@@ -1,15 +1,10 @@
 import React from 'react'
 
-import { Layout } from 'antd';
-
-const { Footer: AntFooter } = Layout;
-
-
 const Footer = () => (
   <div className="Footer">
-    <AntFooter style={{ textAlign: 'center' }}>
+    <div className="text-center">
       de44 ©2017 Created by Espo
-    </AntFooter>
+    </div>
   </div>
 )
 

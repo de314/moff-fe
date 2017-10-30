@@ -9,13 +9,13 @@ const { Content } = Layout;
 
 const PublicApp = () => (
   <div className="PublicApp">
-    <Layout className="layout container-fluid">
+    <div className="layout container-fluid">
       <PublicHeader />
-      <Content style={{ padding: '2em 4em 0 4em' }}>
+      <div className="content" style={{ padding: '2em 4em 0 4em' }}>
         <PublicRoutes />
-      </Content>
+      </div>
       <Footer />
-    </Layout>
+    </div>
   </div>
 )
 

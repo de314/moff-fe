@@ -6,42 +6,33 @@ import { compose } from 'recompose'
 import { connect } from 'react-redux'
 
 import { Layout, Menu, Icon, Row, Col } from 'antd';
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 
 const { Header } = Layout;
 
+// TODO: combine headers?
+
 const PrivateHeader = ({ collapsed, setCollpased }) => (
   <div className="PrivateHeader">
-    <Header style={{ background: '#fff', padding: 0 }}>
-      <Row type="flex" justify="space-between">
-        <Col>
-          <Icon
-            className="trigger"
-            type={collapsed ? 'menu-unfold' : 'menu-fold'}
-            onClick={()=>setCollpased(!collapsed)}
-          />
-        </Col>
-        <Col>
-          <Menu
-            theme="light"
-            mode="horizontal"
-            style={{ lineHeight: '64px' }}
-          >
-            <Menu.Item key="1">
-              <Link to="/profile">
-                Profile
-              </Link>
-            </Menu.Item>
-            <Menu.Item key="2">
-              <Link to="/logout">
-                <i className="fa fa-sign-out mr-3"></i>
-                Logout
-              </Link>
-            </Menu.Item>
-          </Menu>
-        </Col>
-      </Row>
-    </Header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="#">[logo]</a>
+      <button class="navbar-toggler" type="button">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div className="row">
+        <div className="col">
+          toggle
+        </div>
+        <div className="col ml-auto">
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+              <NavLink className="nav-item nav-link" to="/profile">Profile</NavLink>
+              <NavLink className="nav-item nav-link" to="/logout">Logout</NavLink>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
   </div>
 )
 

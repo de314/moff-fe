@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import OAuthService from 'services/OAuthService'
 
-import { Spin, Button } from 'antd'
+import Spin from 'components/utils/Spin'
 
 const Login = ({ isLoggingIn }) => (
   <div className="Login">
@@ -10,13 +10,19 @@ const Login = ({ isLoggingIn }) => (
       <h1>Hello, Login!</h1>
       <p>{isLoggingIn + ''}</p>
       <a href={OAuthService.getImgurAuthUrl()}>
-        <Button className="oauth-btn oauth-btn-imgur">Login with Imgur</Button>
+        <button className="btn btn-success oauth-btn oauth-btn-imgur">
+          Login with Imgur
+        </button>
       </a>
       <a href={OAuthService.getRedditAuthUrl()}>
-        <Button className="oauth-btn oauth-btn-reddit">Login with Reddit</Button>
+        <button className="btn btn-secondary oauth-btn oauth-btn-reddit">
+          Login with Reddit
+        </button>
       </a>
       <a href={OAuthService.getGoogleAuthUrl()}>
-        <Button className="oauth-btn oauth-btn-google">Login with Google</Button>
+        <button className="btn btn-danger oauth-btn oauth-btn-google">
+          Login with Google
+        </button>
       </a>
     </Spin>
   </div>
