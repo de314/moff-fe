@@ -5,6 +5,7 @@ import faker from 'faker'
 import { connect } from 'react-redux'
 import { compose, withProps } from 'recompose'
 
+import ContentWrapper from 'components/layout/ContentWrapper'
 import UsersTable from 'components/users/UsersTable'
 
 const data = _.range(100).map(i => ({
@@ -16,8 +17,10 @@ const data = _.range(100).map(i => ({
 
 let UsersPage = () => (
   <div className="UsersPage">
-    <h1 className="mb-6">Users</h1>
-    <UsersTable users={data} />
+    <ContentWrapper>
+      <h1 className="mb-6">Users</h1>
+      <UsersTable users={data} />
+    </ContentWrapper>
   </div>
 )
 
